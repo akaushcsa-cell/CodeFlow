@@ -1,124 +1,229 @@
-
+<!-- Created by Abhishek -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Html Webpage</title>
+  <title>NSTI Bengaluru - CSA 2025</title>
   <style>
-    body {
+    /* Created by Abhishek */
+    
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
-    nav {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      display: flex;
-      font-size: 30px;
+
+    body {
+      background-color: #000;
+      color: #fff;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      text-decoration: underline;
-      margin-left: 10px;
-      padding-bottom: 20px;
-      margin-bottom: 10px;
-      padding-left: 50px;
-      color: black;
-      height: 50px;
-      width: 95%;
-      border: 2px solid blue;
-      background: rgba(63, 180, 248, 0.2);
-      border-radius: 10px;
+      line-height: 1.5;
+    }
+    
+    nav {
       position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 95%;
+      max-width: 1200px;
+      padding: 15px;
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border: 2px solid aqua;
+      border-radius: 12px;
+      color: white;
+      background: rgba(128, 128, 128, 0.5);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 15px aqua;
+      z-index: 1000;
     }
-    nav:hover {
-      color: red;
+    
+    #content {
+      padding: 100px 20px 40px;
+      max-width: 800px;
+      margin: auto;
     }
-    li {
-      color: black;
-      padding-top: 5px;
-      margin-top: 10px;
+
+    h4 {
+      font-size: 1.5rem;
+      border-bottom: 2px solid limegreen;
+      display: inline-block;
+      margin-bottom: 15px;
+      padding: 0 10px 5px;
     }
+
+    h4:hover {
+      color: #00bfff;
+      transition: color 0.3s ease-in-out;
+    }
+
     button {
       margin-left: 10px;
       color: whitesmoke;
-      border-radius: 10px;
-      background-color: black;
-      border: 1px solid black;
+      border-radius: 8px;
+      background-color: #111;
+      border: 1px solid #444;
       cursor: pointer;
-      padding: 5px 10px;
+      padding: 6px 12px;
+      transition: all 0.3s ease-in-out;
     }
-    div#content {
-      padding: 15px 0px 0px 45px;
-      margin-top: 60px;
+
+    button:hover {
+      background: #00bfff;
+      color: #000;
+      box-shadow: 0 0 10px #00bfff;
     }
-    div#content > h4 {
-      border-bottom: 2px solid greenyellow;
-      padding: 0px 20px 10px 5px;
-      display: inline-block;
-      width: 50%;
+
+    ul {
+      list-style: disc;
+      padding-left: 25px;
+      margin-top: 20px;
     }
+
     li.list-item {
-      border-bottom: 1px solid gray;
-      padding: 10px 0px;
+      padding: 8px 0;
+      font-size: 1.1rem;
       cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      color: white;
+      text-transform: uppercase;
     }
+
     li.list-item:hover {
       color: aqua;
+      text-shadow: 0 0 10px aqua, 0 0 20px aqua;
     }
-    h4:hover {
-      color: blue;
-    }
-    dialog {
-      border-radius: 10px;
-    }
-    dialog input {
-      width: 90%;
-      padding: 5px;
+
+    li.list-item+hr {
+      border: 0;
+      height: 1px;
+      background: #444;
       margin: 5px 0;
+    }
+
+    dialog {
+      border-radius: 12px;
+      border: 2px solid aqua;
+      background: rgba(128, 128, 128, 0.5);
+      color: white;
+      width: 300px;
+      max-width: 95%;
+      padding: 20px;
+      text-align: left;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    dialog h2 {
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    dialog label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    dialog input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: none;
+      border-radius: 6px;
+      text-transform: uppercase;
+    }
+
+    dialog .buttons {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        font-size: 1rem;
+        padding: 10px;
+      }
+
+      h4 {
+        font-size: 1.2rem;
+      }
+
+      li.list-item {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
+
 <body>
   <nav>
-    !! NSTI Bengaluru Session 2025 Students From CSA Trade List !!
+    <u> NSTI Bengaluru Session 2025 – CSA Trade Students </u>
   </nav>
-  <hr>
+
   <div id="content">
-    <h4>SESSIONS 2025 CLASSMATES...<button onclick="openDialog()">open</button></h4>
+    <h4>
+      SESSIONS 2025 CLASSMATES
+      <button onclick="openDialog()">Open</button>
+    </h4>
     <ul id="items">
       <li class="list-item">AKHILA</li>
+      <hr>
       <li class="list-item">ATIKSHA</li>
+      <hr>
       <li class="list-item">ABHAY</li>
+      <hr>
       <li class="list-item">ABHISHEK</li>
+      <hr>
       <li class="list-item">ARSHPREET</li>
+      <hr>
       <li class="list-item">MAHAVEER</li>
+      <hr>
       <li class="list-item">MOHIT</li>
+      <hr>
       <li class="list-item">HIMANSHU</li>
+      <hr>
       <li class="list-item">ANIMESH</li>
+      <hr>
       <li class="list-item">ASHISH</li>
+      <hr>
       <li class="list-item">RAJENDAR</li>
+      <hr>
       <li class="list-item">KANISHKA</li>
+      <hr>
       <li class="list-item">SANGEETA</li>
+      <hr>
       <li class="list-item">MONIKA</li>
+      <hr>
       <li class="list-item">SONA</li>
+      <hr>
       <li class="list-item">UMAIR</li>
+      <hr>
       <li class="list-item">ALIFAIZ</li>
+      <hr>
     </ul>
   </div>
 
-  <dialog id="dialog" style="background-color: rgba(0, 0, 0, .8); color: white; border: 2px solid gray; width: 280px; padding: 15px;">
-    <h2>Feedback Form</h2>
-    <p>Name</p>
+  <dialog id="dialog">
+    <h2>ADD NAME</h2>
+    <label for="nameInput">Name</label>
     <input type="text" id="nameInput" placeholder="Enter your name">
-    <p>Comments</p>
+    <label for="commentInput">Comments</label>
     <input type="text" id="commentInput" placeholder="Enter comments">
-    <br><br>
-    <button onclick="submitForm()">Submit</button>
-    <button onclick="closeDialog()">Close</button>
+    <div class="buttons">
+      <button onclick="submitForm()">Submit</button>
+      <button onclick="closeDialog()">Close</button>
+    </div>
   </dialog>
 
   <script>
     const dialog = document.getElementById("dialog");
+    const ul = document.getElementById("items");
 
     function openDialog() {
       dialog.showModal();
@@ -127,8 +232,42 @@
     function closeDialog() {
       dialog.close();
     }
-          document.getElementById("nameInput").value = "";
-          document.getElementById("commentInput").value = "";
+
+    function submitForm() {
+      const nameInput = document.getElementById("nameInput").value.trim();
+      const commentInput = document.getElementById("commentInput").value.trim();
+
+      if (nameInput === "" || commentInput === "") {
+        alert("Please fill both Name and Comments!");
+        return;
+      }
+
+      const name = nameInput.toUpperCase();
+      const comment = commentInput.toUpperCase();
+
+      const li = document.createElement("li");
+      li.classList.add("list-item");
+      li.textContent = `${name} - ${comment}`;
+
+      const hr = document.createElement("hr");
+
+      li.addEventListener("mouseover", () => {
+        li.style.color = "aqua";
+        li.style.textShadow = "0 0 10px aqua, 0 0 20px aqua";
+      });
+      li.addEventListener("mouseout", () => {
+        li.style.color = "white";
+        li.style.textShadow = "none";
+      });
+
+      ul.insertBefore(hr, ul.firstChild);
+      ul.insertBefore(li, hr);
+
+      closeDialog();
+      document.getElementById("nameInput").value = "";
+      document.getElementById("commentInput").value = "";
+    }
   </script>
 </body>
+
 </html>
