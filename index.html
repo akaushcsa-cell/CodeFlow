@@ -1,12 +1,134 @@
-<html>
-  <head>
-    // its for a heading purpose only...
-  </head>
-  <body>
-    <h1>
-      Hello World !! Abhishek Kaushik
-    </h1>
-    <hr>
-    <p>Its a paragarph tag...</p>
-  </body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Html Webpage</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      font-size: 30px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-decoration: underline;
+      margin-left: 10px;
+      padding-bottom: 20px;
+      margin-bottom: 10px;
+      padding-left: 50px;
+      color: black;
+      height: 50px;
+      width: 95%;
+      border: 2px solid blue;
+      background: rgba(63, 180, 248, 0.2);
+      border-radius: 10px;
+      position: fixed;
+    }
+    nav:hover {
+      color: red;
+    }
+    li {
+      color: black;
+      padding-top: 5px;
+      margin-top: 10px;
+    }
+    button {
+      margin-left: 10px;
+      color: whitesmoke;
+      border-radius: 10px;
+      background-color: black;
+      border: 1px solid black;
+      cursor: pointer;
+      padding: 5px 10px;
+    }
+    div#content {
+      padding: 15px 0px 0px 45px;
+      margin-top: 60px;
+    }
+    div#content > h4 {
+      border-bottom: 2px solid greenyellow;
+      padding: 0px 20px 10px 5px;
+      display: inline-block;
+      width: 50%;
+    }
+    li.list-item {
+      border-bottom: 1px solid gray;
+      padding: 10px 0px;
+      cursor: pointer;
+    }
+    li.list-item:hover {
+      color: aqua;
+    }
+    h4:hover {
+      color: blue;
+    }
+    dialog {
+      border-radius: 10px;
+    }
+    dialog input {
+      width: 90%;
+      padding: 5px;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    !! NSTI Bengaluru Session 2025 Students From CSA Trade List !!
+  </nav>
+  <hr>
+  <div id="content">
+    <h4>SESSIONS 2025 CLASSMATES...<button onclick="openDialog()">open</button></h4>
+    <ul id="items">
+      <li class="list-item">AKHILA</li>
+      <li class="list-item">ATIKSHA</li>
+      <li class="list-item">ABHAY</li>
+      <li class="list-item">ABHISHEK</li>
+      <li class="list-item">ARSHPREET</li>
+      <li class="list-item">MAHAVEER</li>
+      <li class="list-item">MOHIT</li>
+      <li class="list-item">HIMANSHU</li>
+      <li class="list-item">ANIMESH</li>
+      <li class="list-item">ASHISH</li>
+      <li class="list-item">RAJENDAR</li>
+      <li class="list-item">KANISHKA</li>
+      <li class="list-item">SANGEETA</li>
+      <li class="list-item">MONIKA</li>
+      <li class="list-item">SONA</li>
+      <li class="list-item">UMAIR</li>
+      <li class="list-item">ALIFAIZ</li>
+    </ul>
+  </div>
+
+  <dialog id="dialog" style="background-color: rgba(0, 0, 0, .8); color: white; border: 2px solid gray; width: 280px; padding: 15px;">
+    <h2>Feedback Form</h2>
+    <p>Name</p>
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <p>Comments</p>
+    <input type="text" id="commentInput" placeholder="Enter comments">
+    <br><br>
+    <button onclick="submitForm()">Submit</button>
+    <button onclick="closeDialog()">Close</button>
+  </dialog>
+
+  <script>
+    const dialog = document.getElementById("dialog");
+
+    function openDialog() {
+      dialog.showModal();
+    }
+
+    function closeDialog() {
+      dialog.close();
+    }
+          document.getElementById("nameInput").value = "";
+          document.getElementById("commentInput").value = "";
+  </script>
+</body>
 </html>
